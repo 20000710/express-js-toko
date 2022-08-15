@@ -1,0 +1,709 @@
+{
+	"info": {
+		"_postman_id": "6e2987ab-6f77-4427-ad09-0e7becaadd78",
+		"name": "toko",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "get all categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/category?sortby=name&sort=asc&page=1&limit=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"category"
+							],
+							"query": [
+								{
+									"key": "sortby",
+									"value": "name"
+								},
+								{
+									"key": "sort",
+									"value": "asc"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "search",
+									"value": "El",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/category/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Pakaian\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit category",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Tanaman\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/category/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"category",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete category",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/category/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"category",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "seller",
+			"item": [
+				{
+					"name": "get all sellers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/seller?sortby=username&sort=asc&page=1&limit=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"seller"
+							],
+							"query": [
+								{
+									"key": "sortby",
+									"value": "username"
+								},
+								{
+									"key": "sort",
+									"value": "asc"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get seller",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/seller/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"seller",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create seller",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"khair\", \n    \"password\": \"khair123\", \n    \"name\": \"zaki khairi ziwar\", \n    \"email\": \"zaki_khair@gmail.com\", \n    \"phone\": 628234523, \n    \"address\": \"jl.botin no.147\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/seller",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"seller"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit seller",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"abdul_h\", \n    \"password\": \"abdulhamid123\", \n    \"name\": \"abdul hamid\", \n    \"email\": \"abduh@gmail.com\", \n    \"phone\": 628234, \n    \"address\": \"jl.botin no.56\"    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/seller/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"seller",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete seller",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/seller/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"seller",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "get all products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/product?sortby=name&sort=asc&page=1&limit=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"product"
+							],
+							"query": [
+								{
+									"key": "sortby",
+									"value": "name"
+								},
+								{
+									"key": "sort",
+									"value": "asc"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/product/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"product",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"khair\", \n    \"password\": \"khair123\", \n    \"name\": \"zaki khairi ziwar\", \n    \"email\": \"zaki_khair@gmail.com\", \n    \"phone\": 628234523, \n    \"address\": \"jl.botin no.147\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"abdul_h\", \n    \"password\": \"abdulhamid123\", \n    \"name\": \"abdul hamid\", \n    \"email\": \"abduh@gmail.com\", \n    \"phone\": 628234, \n    \"address\": \"jl.botin no.56\"    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/seller/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"seller",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/product/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"product",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "customer",
+			"item": [
+				{
+					"name": "get all customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/customer?sortby=username&sort=asc&page=1&limit=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"customer"
+							],
+							"query": [
+								{
+									"key": "sortby",
+									"value": "username"
+								},
+								{
+									"key": "sort",
+									"value": "asc"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/customer/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"customer",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"danni\", \n    \"password\": \"danni123\", \n    \"name\": \"danni\", \n    \"email\": \"danni@gmail.com\", \n    \"phone\": 62483244, \n    \"gender\": \"male\", \n    \"date_of_birth\": \"2000-03-19\",\n    \"city\": \"jakarta timur\", \n    \"address\": \"jl.swadaya no.1\",\n    \"postal_code\": 13870\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit customer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"danni_w\", \n    \"password\": \"danniwong123\", \n    \"name\": \"danni wong\",\n    \"email\": \"danniwong@gmail.com\", \n    \"phone\": 62483244, \n    \"gender\": \"male\", \n    \"date_of_birth\": \"2000-03-19\",\n    \"city\": \"jakarta timur\", \n    \"address\": \"jl.swadaya no.1\",\n    \"postal_code\": 13870\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/customer/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"customer",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/customer/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"customer",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "transactions",
+			"item": [
+				{
+					"name": "get all transactions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/transactions?sortby=payment_status&sort=asc&page=1&limit=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"transactions"
+							],
+							"query": [
+								{
+									"key": "sortby",
+									"value": "payment_status"
+								},
+								{
+									"key": "sort",
+									"value": "asc"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get transaction",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/transactions/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"transactions",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create transaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\": 1, \n    \"quantity\": 5, \n    \"total_amount\": 42000, \n    \"payment_type\": \"transfer bank\", \n    \"payment_status\": \"pending\",\n    \"shipped_date\": \"2022-09-12\",\n    \"transaction_status\": \"process\",\n    \"customer_id\": 1,\n    \"seller_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/transactions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit transaction",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\": 1, \n    \"quantity\": 5, \n    \"total_amount\": 45000, \n    \"payment_type\": \"GOPAY\", \n    \"payment_status\": \"pending\",\n    \"shipped_date\": \"2022-09-12\",\n    \"transaction_status\": \"process\",\n    \"customer_id\": 1,\n    \"seller_id\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/transactions/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"transactions",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete transaction",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/transactions/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"transactions",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
